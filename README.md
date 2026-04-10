@@ -1,0 +1,67 @@
+# wkayaobama-skills
+
+Personal skills and commands for Claude Code.
+
+## Setup — ${CLAUDE__ROOT}
+
+All skill files use `${CLAUDE__ROOT}` as the absolute root. Set once per machine.
+
+**Bash / Git Bash (add to ~/.bashrc):**
+```bash
+export CLAUDE__ROOT="$HOME/Documents/wkayaobama-skills"
+```
+
+**PowerShell (add to $PROFILE):**
+```powershell
+$env:CLAUDE__ROOT = "$HOME\Documents\wkayaobama-skills"
+```
+
+## Directory Map
+
+```
+wkayaobama-skills/                          ← ${CLAUDE__ROOT}
+  commands/
+    write_plan.md                           ← write a pipeline salvation plan
+    execute_plan.md                         ← execute a plan task-by-task
+  skills/
+    pipeline-salvation/
+      SKILL.md                              ← methodology: buckets, probes, guardrails
+    workflowps/
+      SKILL.md                              ← Bronze ETL: 12-stage PowerShell pipeline
+      metaskill.md                          ← hierarchical incremental extraction
+      INTEGRATIONS.md                       ← integration reference
+    github-deployment/
+      SKILL.md                              ← how to deploy and maintain this repo
+```
+
+## When to Use Each Skill
+
+Skills are context-specific. Invoke only when the task calls for it.
+
+| Skill | When to invoke |
+|-------|---------------|
+| `commands/write_plan.md` | Before touching code on a multi-step task |
+| `commands/execute_plan.md` | When a plan exists and implementation starts |
+| `skills/pipeline-salvation/SKILL.md` | When writing a plan for a messy/partial pipeline |
+| `skills/workflowps/SKILL.md` | When working on the Bronze ETL PowerShell stages |
+| `skills/github-deployment/SKILL.md` | When deploying or updating this skills repo |
+
+**Do not load all skills into every session.** Each skill is referenced from within a command when needed.
+
+## Using a Command
+
+Ask Claude to read the relevant command:
+
+> "Read and follow `${CLAUDE__ROOT}/commands/write_plan.md`"
+
+The command will reference the skills it needs internally via `${CLAUDE__ROOT}` paths.
+
+## Maintenance
+
+When a skill changes in the source project, copy here and commit:
+
+```bash
+cp /path/to/source/commands/write_plan.md commands/
+git add . && git commit -m "update: write_plan — <what changed>"
+git push
+```
