@@ -32,6 +32,11 @@ wkayaobama-skills/                          ← ${CLAUDE__ROOT}
       INTEGRATIONS.md                       ← integration reference
     github-deployment/
       SKILL.md                              ← how to deploy and maintain this repo
+    salvage-pdf-to-word/
+      SKILL.md                              ← rebuild messy PDFs into structured DOCX
+      scripts/                              ← parse.js / build.js / preview.js / render+slice
+      references/                           ← methodology / config / docx-emission gotchas
+      examples/nahoua-formmed5/             ← worked example: French medical form
 ```
 
 ## When to Use Each Skill
@@ -45,6 +50,7 @@ Skills are context-specific. Invoke only when the task calls for it.
 | `skills/pipeline-salvation/SKILL.md` | When writing a plan for a messy/partial pipeline |
 | `skills/workflowps/SKILL.md` | When working on the Bronze ETL PowerShell stages |
 | `skills/github-deployment/SKILL.md` | When deploying or updating this skills repo |
+| `skills/salvage-pdf-to-word/SKILL.md` | When converting an unstructured PDF to DOCX and one-shot converters mangle the structure |
 
 **Do not load all skills into every session.** Each skill is referenced from within a command when needed.
 

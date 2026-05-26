@@ -1,0 +1,15 @@
+{
+  "name": "salvage-pdf-to-word-scripts",
+  "version": "1.0.0",
+  "description": "Bundled scripts for the salvage-pdf-to-word skill",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "docx": "^9.6.1",
+    "mammoth": "^1.12.0",
+    "pdfjs-dist": "^5.7.284"
+  },
+  "optionalDependencies": {
+    "sharp": "^0.34.5"
+  }
+}

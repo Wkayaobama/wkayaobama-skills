@@ -1,0 +1,63 @@
+{
+  "labels": [
+    "Objectif",
+    "Définition",
+    "Procédure",
+    "Procédures",
+    "Codage",
+    "Votre sélection"
+  ],
+  "regex": {
+    "formHeading":  "^(AA|BB)\\d+[a-z]?\\.\\s+",
+    "procSection":  "(?i)^section\\s+\\d+-\\d+\\s*:",
+    "procQuotite":  "(?i)^\\d+(?:ère|ème|e)?\\s*quotité\\s*\\(\\d+-\\d+\\)",
+    "procItem":     "^(\\d{4,5})\\s*-\\s*(.+?)$",
+    "timeBadge":    "(?i)^(?:\\d+\\s*min|variable|jaune|rouge|vert)\\s*$",
+    "tempsTotal":   "(?i)^temps\\s+total"
+  },
+  "thresholds": {
+    "bannerFontSize": 30,
+    "lineYTolerance": 4
+  },
+  "style": {
+    "fonts": {
+      "default": "Arial",
+      "defaultSize": 22
+    },
+    "colors": {
+      "heading":         "1F4E79",
+      "sectionBar":      "2E75B6",
+      "badge":           "C00000",
+      "fieldSlotShade":  "FFF2CC",
+      "tempsTotalShade": "FFF2CC",
+      "cellHeader":      "F2F2F2",
+      "rule":            "BFBFBF"
+    },
+    "tableColumns": {
+      "labelW":   2400,
+      "contentW": 6960
+    },
+    "pageMargin": {
+      "top":    1080,
+      "right":  1080,
+      "bottom": 1080,
+      "left":   1080
+    }
+  },
+  "badgeHighlights": {
+    "min":      "red",
+    "variable": "darkYellow",
+    "jaune":    "yellow",
+    "rouge":    "red",
+    "vert":     "green"
+  },
+  "shadedLabels": ["votre sélection"],
+  "procListLabel": "Procédures",
+  "optionListHosts": ["codage"],
+  "optionListPrefix": "Options disponibles:",
+  "meta": {
+    "title":      "formmed5 — restored",
+    "creator":    "salvage-pdf-to-word :: nahoua-formmed5",
+    "headerText": "formmed5 — restauré"
+  }
+}
