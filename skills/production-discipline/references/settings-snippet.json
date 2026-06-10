@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "(?i)(recommend|should i|should we|which (?:one|path|option|approach)|vs\\b|versus|compare|assess|evaluate|production|how would|why does|why is|tier|workflow|architecture|approach|trade[- ]?off|tradeoff|design)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -ExecutionPolicy Bypass -File \"$HOME/.claude/hooks/rigor-reminder.ps1\"",
+            "timeout": 5,
+            "statusMessage": "Injecting rigor discipline reminder..."
+          }
+        ]
+      }
+    ]
+  }
+}

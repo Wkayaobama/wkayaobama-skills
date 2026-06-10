@@ -37,6 +37,10 @@ wkayaobama-skills/                          ← ${CLAUDE__ROOT}
       scripts/                              ← parse.js / build.js / preview.js / render+slice
       references/                           ← methodology / config / docx-emission gotchas
       examples/nahoua-formmed5/             ← worked example: French medical form
+    production-discipline/
+      SKILL.md                              ← universal rigor gate via UserPromptSubmit hook
+      hooks/                                ← rigor-reminder.ps1 + Option 2 PreToolUse reference
+      references/                           ← settings-snippet.json for ~/.claude/settings.json
 ```
 
 ## When to Use Each Skill
@@ -51,6 +55,7 @@ Skills are context-specific. Invoke only when the task calls for it.
 | `skills/workflowps/SKILL.md` | When working on the Bronze ETL PowerShell stages |
 | `skills/github-deployment/SKILL.md` | When deploying or updating this skills repo |
 | `skills/salvage-pdf-to-word/SKILL.md` | When converting an unstructured PDF to DOCX and one-shot converters mangle the structure |
+| `skills/production-discipline/SKILL.md` | When installing the universal rigor gate (UserPromptSubmit hook that injects sequential-thinking + doc-read + evidence checklist on production-quality prompts) |
 
 **Do not load all skills into every session.** Each skill is referenced from within a command when needed.
 
